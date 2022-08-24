@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #22254b;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.movie img {
+  max-width: 100%;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #2d305a;
+}
+
+.search {
+  width: 200px;
+  padding: 5px;
+  background-color: #2d305a;
+  color: white;
+  border-radius: 50px;
+  border: 3px solid #3b3e79;
+  font-family: inherit;
+}
+.search:focus {
+  outline: none;
+}
+.movie {
+  margin: 0.5rem;
+  width: 230px;
+  background-color: #33365c;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.movie-info {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.movie-info h3 {
+  margin: 0;
+  font-size: medium;
+  font-weight: 500;
+}
+.movie-info span {
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem;
+  background-color: #22254b;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.movie-overview {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  transform: translateY(102%);
+  max-height: 100%;
+}
+.movie:hover .movie-overview {
+  transform: translateY(0%);
+  transition: ease-in-out 0.8s;
+}
+.green {
+  color: rgb(24, 194, 24);
+}
+.orange {
+  color: orange;
+}
+.red {
+  color: red;
+}
+
+.home {
+  cursor: pointer;
+  color: #848cfad0;
+  border: 3px solid #848cfad0;
+  border-radius: 50px;
+  padding: 3px;
 }
